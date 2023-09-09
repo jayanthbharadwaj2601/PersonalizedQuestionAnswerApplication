@@ -1,0 +1,20 @@
+﻿@model List<Issues>
+@{
+    ViewData["Title"] = "HomePage";
+}
+<a asp-action="AddIssue" style="position:relative;box-shadow:2px 2px 2px black; color:black;font-weight:bold; border-style:none;padding:5px 5px; background-color:cornflowerblue;text-decoration:none; width:150px;"  asp-controller="Customer">Add Issue</a>
+
+<br><br>
+<table style=" box-shadow:4px 4px 4px 4px black;text-align:center;word-wrap:break-word;width: 100%;border-style:none; color:white;background-color:black; font-weight:bold; padding:5px 5px;">
+    <tr style="padding: 4px 4px; background-color:darkblue; border-style:solid;border-color:white;">
+        <th>Issue</th>
+        <th>Solutions</th>
+    </tr>
+@foreach(Issues i in Model)
+{
+       <tr>
+           <td>@i.issue</td>
+           <td><a asp-action="viewresponses" asp-controller="Customer" asp-route-obj="@i.Id">View Solutions</a></td>
+       </tr>
+}
+</table>

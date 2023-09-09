@@ -1,0 +1,12 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Login";
+}
+<form method="post">
+    <div align="center" style="display:flex;flex-direction:column; gap:10px; width:400px; position:relative;left:15%; padding:10px 10px;background-color:black; box-shadow:3px 3px 3px 3px black;">
+    <input type="text" asp-for="Name" placeholder="username"></input>
+    <input type="text" asp-for="Password" placeholder="password"></input>
+    <input type="submit" style="position:relative;box-shadow:2px 2px 2px black;left:120px; color:black;font-weight:bold; border-style:none;padding:5px 5px; background-color:cyan;text-decoration:none; width:150px;" value="Login"></input>
+    </div>
+</form>
+

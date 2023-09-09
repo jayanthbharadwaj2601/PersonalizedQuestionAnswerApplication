@@ -1,0 +1,19 @@
+﻿@model List<Solutions>
+@{
+    ViewData["Title"] = "viewresponses";
+}
+@foreach(Solutions i in Model)
+{
+    <a asp-action="returnToHomePage" style="position:relative;box-shadow:2px 2px 2px black; color:black;font-weight:bold; border-style:none;padding:5px 5px; background-color:cornflowerblue;text-decoration:none; width:150px;" asp-controller="Customer" asp-route-obj="@i.Customer">Home</a>
+    break;
+}
+<br>
+<br>
+@foreach(Solutions i in Model)
+{   <div style="width:80%;border-style:solid;border-radius:10px; border-color:brown; border-width:5px;word-wrap:break-word;box-shadow:5px 5px 5px 5px black; padding:5px 5px;">
+    <h6>@i.Admin</h6>
+    <p>@i.Solution</p>
+    </div>
+    <br>
+    <br>
+}
